@@ -154,7 +154,8 @@
     <button class="lightbox-close" id="lb-close">✕</button>
     <button class="lightbox-nav lightbox-prev" id="lb-prev">‹</button>
     <button class="lightbox-nav lightbox-next" id="lb-next">›</button>
-    <img id="lb-img" src="" alt="" />
+    <img id="lb-img" src="" alt="" style="display:none" />
+    <video id="lb-video" controls playsinline style="display:none;max-width:90vw;max-height:80vh;border-radius:12px;background:#000"></video>
     <div class="lightbox-caption" id="lb-caption"></div>
   </div>
 </div>
@@ -356,26 +357,42 @@ function renderProjects() {
 let galleryIndex = 0;
 const galleryItems = GALLERY || [];
 
+function isVideo(src) { return /\.(mp4|webm|ogg|mov)$/i.test(src || ''); }
+
 function renderGallery() {
   if (!galleryItems.length) {
     html('gallery-grid', `
       <div class="empty-state">
         <div class="empty-icon">📷</div>
-        <p>Gallery coming soon.<br>Put photos in <code>assets/gallery/</code> and add entries to<br><code>GALLERY</code> in <code>data.js</code>.</p>
+        <p>Gallery coming soon.<br>Put files in <code>assets/gallery/</code> and add entries to<br><code>GALLERY</code> in <code>data.js</code>.<br>Images (.jpg .png) and videos (.mp4 .webm) are both supported.</p>
       </div>`);
     return;
   }
-  const gridHTML = galleryItems.map((item, i) => `
-    <div class="gallery-item reveal" onclick="openLightbox(${i})">
-      <img src="${esc(item.src)}" alt="${esc(item.caption || '')}" loading="lazy"
-           onerror="this.src='';this.parentElement.style.background='var(--pink-100)'" />
-      <div class="gallery-overlay">
-        <div class="gallery-caption">
-          <strong>${esc(item.caption || '')}</strong>
-          ${item.date ? esc(item.date) : ''}
-        </div>
-      </div>
-    </div>`).join('');
+  const gridHTML = galleryItems.map((item, i) => {
+    const cap = esc(item.caption || '');
+    const date = item.date ? esc(item.date) : '';
+    if (isVideo(item.src)) {
+      return `
+        <div class="gallery-item gallery-video-item reveal" onclick="openLightbox(${i})">
+          <video src="${esc(item.src)}" muted preload="metadata" playsinline
+                 class="gallery-video-thumb"
+                 onerror="this.parentElement.classList.add('gallery-item-err')"></video>
+          <div class="gallery-play-btn">▶</div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption"><strong>${cap}</strong>${date}</div>
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div class="gallery-item reveal" onclick="openLightbox(${i})">
+          <img src="${esc(item.src)}" alt="${cap}" loading="lazy"
+               onerror="this.parentElement.classList.add('gallery-item-err')" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption"><strong>${cap}</strong>${date}</div>
+          </div>
+        </div>`;
+    }
+  }).join('');
   html('gallery-grid', gridHTML);
 }
 
@@ -387,14 +404,31 @@ function openLightbox(i) {
   document.body.style.overflow = 'hidden';
 }
 function closeLightbox() {
+  // Pause video if playing
+  const vid = el('lb-video');
+  vid.pause();
+  vid.src = '';
   el('lightbox').classList.remove('open');
   document.body.style.overflow = '';
 }
 function updateLightbox() {
   const item = galleryItems[galleryIndex];
   if (!item) return;
-  el('lb-img').src = item.src;
-  el('lb-img').alt = item.caption || '';
+  const lbImg = el('lb-img');
+  const lbVid = el('lb-video');
+
+  if (isVideo(item.src)) {
+    lbImg.style.display = 'none';
+    lbVid.style.display = 'block';
+    lbVid.src = item.src;
+    lbVid.load();
+  } else {
+    lbVid.pause(); lbVid.src = ''; lbVid.style.display = 'none';
+    lbImg.style.display = 'block';
+    lbImg.src = item.src;
+    lbImg.alt = item.caption || '';
+  }
+
   el('lb-caption').textContent = [item.caption, item.date].filter(Boolean).join(' · ');
   el('lb-prev').style.display = galleryIndex > 0 ? '' : 'none';
   el('lb-next').style.display = galleryIndex < galleryItems.length - 1 ? '' : 'none';

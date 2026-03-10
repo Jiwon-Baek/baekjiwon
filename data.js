@@ -20,9 +20,9 @@ const PROFILE = {
   lab: "Engineering Systems Informatics & Technology Lab (EnSITE)",
   email: "baekjiwon@snu.ac.kr",
   photo: "assets/images/profile.jpg",   // ← Put your photo here
-  cv: "CV(2025).pdf",                   // ← Path to your CV
+  cv: "CV(2025)(Kor).pdf",                   // ← Path to your CV
   bio: [
-    "I am a Master's student at the Department of Naval Architecture and Ocean Engineering, Seoul National University, advised by Prof. Jong-hun Woo.",
+    "I am a Ph.D. student at the Department of Naval Architecture and Ocean Engineering, Seoul National University, advised by Prof. Jong-hun Woo.",
     "My research focuses on production engineering and intelligent manufacturing — applying reinforcement learning, evolutionary algorithms, and multi-agent systems to factory scheduling and shipbuilding process optimization.",
     "I am particularly interested in bridging the gap between combinatorial optimization and data-driven AI methods to tackle real-world industrial scheduling challenges."
   ],
@@ -35,11 +35,11 @@ const PROFILE = {
     "Shipbuilding Engineering"
   ],
   social: {
-    github:        "",   // e.g. "https://github.com/yourname"
-    linkedin:      "",   // e.g. "https://linkedin.com/in/yourname"
-    googleScholar: "",   // e.g. "https://scholar.google.com/citations?user=XXXX"
-    researchGate:  "",   // e.g. "https://researchgate.net/profile/yourname"
-    orcid:         "",   // e.g. "https://orcid.org/0000-0000-0000-0000"
+    github:        "https://github.com/jiwon-baek",   // e.g. "https://github.com/yourname"
+    linkedin:      "https://www.linkedin.com/in/jiwon-baek-127675297/",   // e.g. "https://linkedin.com/in/yourname"
+    // googleScholar: "",   // e.g. "https://scholar.google.com/citations?user=XXXX"
+    // researchGate:  "",   // e.g. "https://researchgate.net/profile/yourname"
+    orcid:         "https://orcid.org/0009-0006-6920-0192",   // e.g. "https://orcid.org/0000-0000-0000-0000"
   }
 };
 
@@ -98,24 +98,26 @@ const PUBLICATIONS = [
   // ── Conference Papers ────────────────────────────────────────
   {
     type: "conference",
-    title: "RUBI: Relative-Urgency Based Initialization for solving Job Shop Scheduling Problem",
+    title: "RUBI: Relative-Urgency Based Initialization for Solving Job Shop Scheduling Problem",
     authors: "Baek, J., Oh, H., Woo, J.",
-    venue: "IFIP Advances in Production Management Systems (APMS 2025)",
+    venue: "IFIP Advances in Production Management Systems (APMS 2025), Springer",
     year: 2025,
     month: "Aug",
-    note: "1st Author · Accepted",
-    url: "",   // ← Add URL when proceedings are published
+    note: "1st Author",
+    doi: "10.1007/978-3-032-03550-9_20",
+    url: "https://doi.org/10.1007/978-3-032-03550-9_20",
     tags: ["Job Shop Scheduling", "Initialization Heuristic", "Metaheuristics"]
   },
   {
     type: "conference",
     title: "Feasibility Study on the Interactive AI Scheduling with LLM Technology for Human-Centric Industry 5.0",
     authors: "Oh, H., Baek, J., Woo, J.",
-    venue: "IFIP Advances in Production Management Systems (APMS 2025)",
+    venue: "IFIP Advances in Production Management Systems (APMS 2025), Springer",
     year: 2025,
     month: "Aug",
-    note: "Accepted",
-    url: "",   // ← Add URL when proceedings are published
+    note: "Co-Author",
+    doi: "10.1007/978-3-032-03515-8_29",
+    url: "https://doi.org/10.1007/978-3-032-03515-8_29",
     tags: ["LLM", "AI Scheduling", "Industry 5.0"]
   },
   {
@@ -228,15 +230,26 @@ const ACTIVITIES = [
 // GALLERY
 // ─────────────────────────────────────────────────────────────────
 //
-// Put image files in:  assets/gallery/
-// Then add entries below:
+// Supported formats: images (.jpg .png .gif .webp) and videos (.mp4 .webm)
+// The type is auto-detected from the file extension — no need to specify.
 //
-//   { src: "assets/gallery/filename.jpg", caption: "Caption text", date: "Dec 2024" }
+// Put files in assets/gallery/, then add an entry:
+//   { src: "assets/gallery/file.jpg", caption: "Caption", date: "Dec 2024" }
+//   { src: "assets/gallery/file.mp4", caption: "Caption", date: "2025" }
 //
-// The gallery auto-arranges into a responsive grid. Order = display order.
+// Order = display order in the grid.
 //
 const GALLERY = [
-  // ── Paste your photos below. Example: ───────────────────────
-  // { src: "assets/gallery/wsc2024.jpg",   caption: "WSC 2024, Orlando, FL", date: "Dec 2024" },
-  // { src: "assets/gallery/kaboat2022.jpg", caption: "KABOAT 2022 — 1st Place", date: "Aug 2022" },
+  { src: "assets/gallery/2024_WSC_overview.png",
+    caption: "WSC 2024 — Overview", date: "Dec 2024" },
+  { src: "assets/gallery/2024_WSC_video1.mp4",
+    caption: "WSC 2024 — Problem Description", date: "Dec 2024" },
+  { src: "assets/gallery/2024_WSC_video2.mp4",
+    caption: "WSC 2024 — Presentation", date: "Dec 2024" },
+  { src: "assets/gallery/Quay_Wall_Allocation_problem(Eng).mp4",
+    caption: "Quay Wall Allocation Problem", date: "2025" },
+  { src: "assets/gallery/Quay_Wall_Allocation_problem(Kor).mp4",
+    caption: "안벽 배치 최적화 문제", date: "2025" },
+  { src: "assets/gallery/Steel_Stock_Yard.mp4",
+    caption: "Steel Stock Yard Simulation", date: "2025" },
 ];
