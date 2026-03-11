@@ -19,7 +19,7 @@ const PROFILE = {
   department: "Dept. of Naval Architecture & Ocean Engineering",
   lab: "Engineering Systems Informatics & Technology Lab (EnSITE)",
   email: "baekjiwon@snu.ac.kr",
-  photo: "assets/images/profile.jpg",   // ← Put your photo here
+  photo: "assets/gallery/photo3.jpg",  // ← Put your photo here
   cv: "CV(2025)(Kor).pdf",                   // ← Path to your CV
   bio: [
     "I am a Ph.D. student at the Department of Naval Architecture and Ocean Engineering, Seoul National University, advised by Prof. Jong-hun Woo.",
@@ -51,7 +51,7 @@ const EDUCATION = [
     degree: "M.S. in Naval Architecture & Ocean Engineering",
     institution: "Seoul National University",
     period: "2024 – Present",
-    note: "Graduate Researcher, EnSITE Lab"
+    note: "Graduate Researcher, SNUPEL Lab"
   },
   {
     degree: "B.S. in Naval Architecture & Ocean Engineering",
@@ -96,6 +96,31 @@ const PUBLICATIONS = [
   },
 
   // ── Conference Papers ────────────────────────────────────────
+  {
+    type: "conference",
+    title: "Multi-Agent Reinforcement Learning Framework for Shipyard Block Assembly Process Scheduling",
+    authors: "Cho, Y., Baek, J., Yoon, H., Choi, W., Yoo, Y., Sung, S., Lee, D., Woo, J.",
+    venue: "2026 한국CDE학회 동계학술대회, 한국CDE학회, 평창",
+    year: 2026,
+    month: "Feb",
+    note: "2nd Author · Oral(Presenter)",
+    doi: "",
+    url: "",
+    award: "학생우수논문발표상",
+    tags: ["Shipyard Assembly", "Reinforcement Learning", "Multi-Agent System"],
+  },
+  {
+    type: "conference",
+    title: "열변형 제약을 고려한 네스팅 강재 절단 순서 결정 알고리즘 개발",
+    authors: "백지원, 윤희창, 최원석, 손숙영, 김성대, 우종훈",
+    venue: "2025 대한산업공학회 춘계학술대회, 대한산업공학회, 대전",
+    year: 2025,
+    month: "Nov",
+    note: "1st Author · Oral(Presenter)",
+    doi: "",
+    url: "",
+    tags: ["Nesting", "Steel Cutting", "Thermal Deformation", "Shipbuilding"]
+  },
   {
     type: "conference",
     title: "RUBI: Relative-Urgency Based Initialization for Solving Job Shop Scheduling Problem",
@@ -180,20 +205,41 @@ const PUBLICATIONS = [
 //
 const PROJECTS = [
   // ── Paste your projects below. Example: ─────────────────────
-  // {
-  //   title: "RUBI: Urgency-Based Scheduling Initialization",
-  //   description: "A novel initialization strategy for genetic algorithms applied to the Job Shop Scheduling Problem, leveraging relative urgency metrics to improve convergence speed and solution quality.",
-  //   period: "2024 – 2025",
-  //   tags: ["Python", "Genetic Algorithm", "Scheduling"],
-  //   url: "",        // ← GitHub or paper URL
-  //   image: ""       // ← e.g. "assets/images/proj_rubi.jpg"
-  // },
+  {
+    title: "Nesting Cutting Sequence Optimization",
+    description: "Industrial Collaboration with HD Korea Shipbuilding and Offshore Engineering Co., Ltd. & Hyundai Samho Heavy Industries Co., Ltd.",
+    period: "2024 – 2025",
+    tags: ["Python", "Optimization", "Steel Cutting"],
+    url: "",        // ← GitHub or paper URL
+    image: ""       // ← e.g. "assets/images/proj_rubi.jpg"
+  },
+  {
+    title: "Block Arrangement Problem",
+    description: "Industrial Collaboration with Samsung Heavy Industries Co., Ltd.",
+    period: "2025",
+    tags: ["Python", "Optimization", "Block Assembly"],
+    url: "",        // ← GitHub or paper URL
+    image: ""       // ← e.g. "assets/images/proj_rubi.jpg"
+  },
+  {
+    title: "Shipyard Grand Block Assembly Problem",
+    description: "Industrial Collaboration with HD Korea Shipbuilding and Offshore Engineering Co., Ltd. & Hyundai Samho Heavy Industries Co., Ltd.",
+    period: "2025",
+    tags: ["Python", "Optimization", "Shipyard Production", "Reinforcement Learning", "Multi-Agent System"],
+    url: "",        // ← GitHub or paper URL
+    image: "assets/projects/proj_MAS.png"       // ← e.g. "assets/images/proj_rubi.jpg"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────
 // AWARDS & ACTIVITIES
 // ─────────────────────────────────────────────────────────────────
 const AWARDS = [
+  {
+    title: "학생우수논문발표상 (Best Student Paper Presentation Award)",
+    event: "2026 CDE Winter Conference",
+    year: "Feb 2026"
+  },
   {
     title: "학생우수논문발표상 (Best Student Paper Presentation Award)",
     event: "2025 한국해양과학기술협의회 공동학술대회",
@@ -205,7 +251,7 @@ const AWARDS = [
     year: "Feb 2024"
   },
   {
-    title: "1st Place – Remote Control Division & Resistance/Propulsion Design Award",
+    title: "1st Place – Remote Control & Resistance/Propulsion Design Award",
     event: "3rd KABOAT (자율운항보트 경진대회), Team SAS, Seoul National University",
     year: "Aug 2022"
   }
@@ -214,7 +260,7 @@ const AWARDS = [
 const ACTIVITIES = [
   {
     title: "Exchange Student",
-    place: "Shanghai Jiao Tong University (上海交通大学)",
+    place: "Shanghai Jiao Tong University",
     period: "Feb 2022 – Jul 2022",
     description: "Semester-long exchange program in Shanghai, China."
   },
@@ -252,4 +298,11 @@ const GALLERY = [
     caption: "안벽 배치 최적화 문제", date: "2025" },
   { src: "assets/gallery/Steel_Stock_Yard.mp4",
     caption: "Steel Stock Yard Simulation", date: "2025" },
+
+  { src: "assets/gallery/photo1.jpg",
+    caption: "Seoul, Korea", date: "2024" },
+  { src: "assets/gallery/photo2.jpg",
+    caption: "Fukuoka, Japan", date: "2025" },
+  { src: "assets/gallery/photo3.jpg",
+    caption: "SNU Graduation", date: "Feb 2024" },
 ];
