@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:baekjiwon.wixsite.com)",
       "WebFetch(domain:orcid.org)",
-      "WebFetch(domain:pub.orcid.org)"
+      "WebFetch(domain:pub.orcid.org)",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   }
 }

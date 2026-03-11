@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lee Jihyun | Nuclear Engineering Researcher</title>
+  <meta name="description" content="Personal academic website of Lee Jihyun — M.S. Researcher at Seoul National University. GPU-accelerated Radiological Dispersion Simulation, Nuclear Safety, Nuclear Techno-economics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" id="nav-logo">Lee Jihyun</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home"    class="nav-a">Home</a></li>
+      <li><a href="#about"   class="nav-a">About</a></li>
+      <li><a href="#research"class="nav-a">Research</a></li>
+      <li><a href="#project" class="nav-a">Project</a></li>
+      <li><a href="#gallery" class="nav-a">Gallery</a></li>
+      <li><a href="#contact" class="nav-a">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#home"     class="nav-a">Home</a>
+    <a href="#about"    class="nav-a">About</a>
+    <a href="#research" class="nav-a">Research</a>
+    <a href="#project"  class="nav-a">Project</a>
+    <a href="#gallery"  class="nav-a">Gallery</a>
+    <a href="#contact"  class="nav-a">Contact</a>
+  </div>
+</nav>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section id="home" class="section">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text-col">
+        <div class="hero-eyebrow">✦ Nuclear Engineering Researcher</div>
+        <div class="hero-name" id="hero-name"></div>
+        <div class="hero-name-kor" id="hero-name-kor"></div>
+        <div class="hero-title" id="hero-title"></div>
+        <div class="hero-affil" id="hero-affil"></div>
+        <p class="hero-bio" id="hero-bio"></p>
+        <div class="hero-actions" id="hero-actions"></div>
+        <div class="hero-social" id="hero-social"></div>
+        <div class="interests-row" id="hero-interests"></div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame" id="hero-photo-frame"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <p class="section-sub">Background, education &amp; achievements</p>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="about-bio" id="about-bio"></div>
+        <div class="about-interests">
+          <h4>Research Interests</h4>
+          <div class="interests-row" id="about-interests"></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;margin-bottom:1.2rem;color:var(--text)">Education</h3>
+        <div class="edu-timeline" id="edu-timeline"></div>
+        <div class="awards-list" id="awards-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ RESEARCH ══════════════════ -->
+<section id="research" class="section">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Research <span>&amp; Publications</span></h2>
+      <p class="section-sub">Journals, conference papers &amp; presentations</p>
+    </div>
+    <div class="reveal">
+      <div class="pub-filter" id="pub-filter"></div>
+      <div class="pub-list" id="pub-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PROJECT ══════════════════ -->
+<section id="project" class="section">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Pro<span>jects</span></h2>
+      <p class="section-sub">Research projects &amp; implementations</p>
+    </div>
+    <div class="reveal">
+      <div class="project-grid" id="project-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ GALLERY ══════════════════ -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Gal<span>lery</span></h2>
+      <p class="section-sub">Conferences, simulations &amp; memories</p>
+    </div>
+    <div class="reveal">
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Get in <span>Touch</span></h2>
+      <p class="section-sub">Feel free to reach out for collaborations or questions</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <p id="contact-intro"></p>
+        <div class="contact-items" id="contact-items"></div>
+      </div>
+      <div>
+        <h3 style="font-size:1.1rem;margin-bottom:1.2rem;color:var(--text)">Find me online</h3>
+        <div class="social-grid" id="social-grid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <p id="footer-text"></p>
+</footer>
+
+<!-- ══════════════════ LIGHTBOX ══════════════════ -->
+<div id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lb-close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lb-prev">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lb-next">›</button>
+    <img id="lb-img" src="" alt="" style="display:none" />
+    <video id="lb-video" controls playsinline style="display:none;max-width:90vw;max-height:80vh;border-radius:12px;background:#000"></video>
+    <div class="lightbox-caption" id="lb-caption"></div>
+  </div>
+</div>
+
+<!-- ══════════════════ DATA & SCRIPT ══════════════════ -->
+<script src="data.js"></script>
+<script>
+/* ────────────────────────────────────────────────────────────
+   RENDERER  — reads data.js constants and builds the page
+   ──────────────────────────────────────────────────────────── */
+
+// ── helpers ──────────────────────────────────────────────────
+function el(id)       { return document.getElementById(id); }
+function html(id, s)  { el(id).innerHTML = s; }
+function esc(s)       { return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function tag(t)       { return `<span class="tag">${esc(t)}</span>`; }
+function tags(arr)    { return (arr || []).map(tag).join(''); }
+function badge(text, cls) { return text ? `<span class="badge ${cls}">${esc(text)}</span>` : ''; }
+
+function authorHTML(authStr) {
+  // Bold "Lee, J." or "이지현"
+  return esc(authStr)
+    .replace(/Lee,\s*J\./g, '<strong>Lee, J.</strong>')
+    .replace(/이지현/g, '<strong>이지현</strong>');
+}
+
+function socialIcon(key) {
+  const icons = {
+    github:        `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>`,
+    linkedin:      `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+    googleScholar: `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>`,
+    researchGate:  `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.085 12.085 0 0 0-.198 1.809v.233c-.31-.032-.64-.05-.993-.05H3.172a.768.768 0 0 0-.77.768v16.395c0 .424.346.768.77.768h11.937c.424 0 .768-.344.768-.768V8.19c0-.424-.344-.77-.768-.77H8.744v5.23h2.97a4.258 4.258 0 0 1-4.264 3.614 4.263 4.263 0 0 1 0-8.526 4.25 4.25 0 0 1 2.98 1.218l1.977-1.978A6.846 6.846 0 0 0 7.45 5.07a6.854 6.854 0 0 0 0 13.705 6.854 6.854 0 0 0 6.855-6.855c0-.538-.064-1.062-.18-1.566v9.073h1.537V4.635h.109c.37 0 .704.02.998.06v14.732h1.538V4.843c.059-.59.197-1.044.41-1.363.353-.53.887-.795 1.608-.795.503 0 .903.113 1.198.338.294.225.494.546.597.963.104.416.155.94.155 1.575v16.866h1.537V5.561c0-.842-.092-1.563-.278-2.164-.185-.6-.489-1.1-.91-1.499-.42-.4-.928-.694-1.525-.884A6.46 6.46 0 0 0 19.586 0z"/></svg>`,
+    orcid:         `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.484 3.872-3.722 0-2.016-1.284-3.722-3.872-3.722h-2.297z"/></svg>`,
+  };
+  return icons[key] || '🔗';
+}
+
+// ── HERO ─────────────────────────────────────────────────────
+function renderHero() {
+  html('hero-name', esc(PROFILE.name));
+  html('hero-name-kor', esc(PROFILE.nameKor));
+  html('hero-title', esc(PROFILE.title));
+  html('hero-affil', `${esc(PROFILE.department)}, ${esc(PROFILE.affiliation)}`);
+  html('hero-bio', PROFILE.bio[0] ? esc(PROFILE.bio[0]) : '');
+
+  // CTA buttons
+  let actions = `<a href="#about" class="btn btn-primary">About Me</a>`;
+  if (PROFILE.cv) actions += `<a href="${esc(PROFILE.cv)}" class="btn btn-outline" target="_blank">Download CV ↓</a>`;
+  html('hero-actions', actions);
+
+  // Social links
+  let socialHTML = '';
+  Object.entries(PROFILE.social || {}).forEach(([key, url]) => {
+    if (url) socialHTML += `<a href="${esc(url)}" class="social-btn" target="_blank" rel="noopener" title="${key}">${socialIcon(key)}</a>`;
+  });
+  html('hero-social', socialHTML);
+
+  // Interests
+  html('hero-interests', (PROFILE.interests || []).map(i => `<span class="interest-chip">${esc(i)}</span>`).join(''));
+
+  // Photo
+  const frame = el('hero-photo-frame');
+  if (PROFILE.photo) {
+    const img = new Image();
+    img.onload  = () => { frame.innerHTML = `<img src="${esc(PROFILE.photo)}" alt="${esc(PROFILE.name)}" />`; };
+    img.onerror = () => { frame.innerHTML = placeholder(); };
+    img.src = PROFILE.photo;
+  } else {
+    frame.innerHTML = placeholder();
+  }
+  function placeholder() {
+    return `<div class="hero-photo-placeholder"><div>👤</div><p>Add photo to<br>assets/images/</p></div>`;
+  }
+}
+
+// ── ABOUT ─────────────────────────────────────────────────────
+function renderAbout() {
+  // Bio
+  const bioHTML = (PROFILE.bio || []).map(p => `<p>${esc(p)}</p>`).join('');
+  html('about-bio', bioHTML);
+  html('about-interests', tags(PROFILE.interests));
+
+  // Education
+  const eduHTML = (EDUCATION || []).map(e => `
+    <div class="edu-item">
+      <div class="edu-dot-col"><div class="edu-dot"></div><div class="edu-line"></div></div>
+      <div class="edu-content">
+        <div class="edu-period">${esc(e.period)}</div>
+        <div class="edu-degree">${esc(e.degree)}</div>
+        ${e.institution ? `<div class="edu-inst">${esc(e.institution)}</div>` : ''}
+        ${e.note ? `<div class="edu-note">${esc(e.note)}</div>` : ''}
+      </div>
+    </div>`).join('');
+  html('edu-timeline', eduHTML);
+
+  // Awards
+  if (AWARDS && AWARDS.length) {
+    const awardsHTML = `<h3 style="font-size:1.1rem;margin-bottom:0.9rem;margin-top:1.8rem;color:var(--text)">Awards &amp; Scholarships</h3>` +
+      AWARDS.map(a => `
+        <div class="award-item">
+          <div class="award-icon">🏆</div>
+          <div class="award-text">
+            <div class="award-title">${esc(a.title)}</div>
+            <div class="award-meta">${esc(a.event)} · ${esc(a.year)}</div>
+          </div>
+        </div>`).join('');
+    html('awards-list', awardsHTML);
+  }
+}
+
+// ── RESEARCH ──────────────────────────────────────────────────
+let pubFilter = 'all';
+function renderResearch() {
+  const pubs = PUBLICATIONS || [];
+
+  // Filter buttons
+  const jCount = pubs.filter(p => p.type === 'journal').length;
+  const cCount = pubs.filter(p => p.type === 'conference').length;
+  const filterHTML = [
+    { key: 'all',        label: `All (${pubs.length})` },
+    { key: 'journal',    label: `Journal (${jCount})` },
+    { key: 'conference', label: `Conference (${cCount})` },
+  ].map(f => `<button class="filter-btn ${pubFilter===f.key?'active':''}" onclick="setPubFilter('${f.key}')">${f.label}</button>`).join('');
+  html('pub-filter', filterHTML);
+
+  // Publication cards
+  const sorted = [...pubs].sort((a, b) => b.year - a.year || 0);
+  const filtered = pubFilter === 'all' ? sorted : sorted.filter(p => p.type === pubFilter);
+
+  const listHTML = filtered.map(p => {
+    const typeLabel = p.type === 'journal' ? 'Journal' : 'Conference';
+    const typeCls   = p.type === 'journal' ? 'badge-journal' : 'badge-conf';
+    const monthYear = `${p.month ? p.month + ' ' : ''}${p.year}`;
+
+    let linksHTML = '';
+    if (p.url)  linksHTML += `<a href="${esc(p.url)}" class="pub-link-btn" target="_blank" rel="noopener">🔗 Link</a>`;
+    if (p.doi)  linksHTML += `<a href="https://doi.org/${esc(p.doi)}" class="pub-link-btn" target="_blank" rel="noopener">DOI</a>`;
+
+    return `
+      <div class="pub-card ${p.type} reveal">
+        <div class="pub-meta">
+          ${badge(typeLabel, typeCls)}
+          ${badge(p.note, 'badge-note')}
+          ${badge(p.award, 'badge-award')}
+          <span class="pub-year">${esc(monthYear)}</span>
+        </div>
+        <div class="pub-title">${esc(p.title)}</div>
+        ${p.titleEn ? `<div class="pub-title-en">${esc(p.titleEn)}</div>` : ''}
+        <div class="pub-authors">${authorHTML(p.authors)}</div>
+        <div class="pub-venue"><span>${esc(p.venue)}</span>${p.volume ? `, ${esc(p.volume)}` : ''}</div>
+        <div class="pub-footer">
+          <div class="pub-tags">${tags(p.tags)}</div>
+          <div class="pub-links">${linksHTML}</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  html('pub-list', listHTML || '<p style="color:var(--text-3);padding:1rem 0">No publications found.</p>');
+  observeReveal();
+}
+
+function setPubFilter(f) {
+  pubFilter = f;
+  renderResearch();
+}
+
+// ── PROJECTS ──────────────────────────────────────────────────
+function renderProjects() {
+  const projs = PROJECTS || [];
+  if (!projs.length) {
+    html('project-grid', `
+      <div class="empty-state">
+        <div class="empty-icon">⚛️</div>
+        <p>Projects coming soon.<br>Add entries to <code>PROJECTS</code> in <code>data.js</code> to display them here.</p>
+      </div>`);
+    return;
+  }
+  const gridHTML = projs.map(p => `
+    <div class="project-card reveal">
+      <div class="project-img">
+        ${p.image
+          ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'project-img-placeholder\\'>⚛️</div>'" />`
+          : `<div class="project-img-placeholder">⚛️</div>`}
+      </div>
+      <div class="project-body">
+        ${p.period ? `<div class="project-period">${esc(p.period)}</div>` : ''}
+        <div class="project-title">${esc(p.title)}</div>
+        <div class="project-desc">${esc(p.description)}</div>
+        <div class="project-footer">
+          <div class="project-tags">${tags(p.tags)}</div>
+          ${p.url ? `<a href="${esc(p.url)}" class="btn btn-ghost" target="_blank" rel="noopener">View →</a>` : ''}
+        </div>
+      </div>
+    </div>`).join('');
+  html('project-grid', gridHTML);
+}
+
+// ── GALLERY ───────────────────────────────────────────────────
+let galleryIndex = 0;
+const galleryItems = GALLERY || [];
+
+function isVideo(src) { return /\.(mp4|webm|ogg|mov)$/i.test(src || ''); }
+
+function renderGallery() {
+  if (!galleryItems.length) {
+    html('gallery-grid', `
+      <div class="empty-state">
+        <div class="empty-icon">📷</div>
+        <p>Gallery coming soon.<br>Put files in <code>assets/gallery/</code> and add entries to<br><code>GALLERY</code> in <code>data.js</code>.<br>Images (.jpg .png) and videos (.mp4 .webm) are both supported.</p>
+      </div>`);
+    return;
+  }
+  const gridHTML = galleryItems.map((item, i) => {
+    const cap = esc(item.caption || '');
+    const date = item.date ? esc(item.date) : '';
+    if (isVideo(item.src)) {
+      return `
+        <div class="gallery-item gallery-video-item reveal" onclick="openLightbox(${i})">
+          <video src="${esc(item.src)}" muted preload="metadata" playsinline
+                 class="gallery-video-thumb"
+                 onerror="this.parentElement.classList.add('gallery-item-err')"></video>
+          <div class="gallery-play-btn">▶</div>
+          <div class="gallery-overlay">
+            <div class="gallery-caption"><strong>${cap}</strong>${date}</div>
+          </div>
+        </div>`;
+    } else {
+      return `
+        <div class="gallery-item reveal" onclick="openLightbox(${i})">
+          <img src="${esc(item.src)}" alt="${cap}" loading="lazy"
+               onerror="this.parentElement.classList.add('gallery-item-err')" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption"><strong>${cap}</strong>${date}</div>
+          </div>
+        </div>`;
+    }
+  }).join('');
+  html('gallery-grid', gridHTML);
+}
+
+function openLightbox(i) {
+  if (!galleryItems.length) return;
+  galleryIndex = i;
+  updateLightbox();
+  el('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  const vid = el('lb-video');
+  vid.pause();
+  vid.src = '';
+  el('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function updateLightbox() {
+  const item = galleryItems[galleryIndex];
+  if (!item) return;
+  const lbImg = el('lb-img');
+  const lbVid = el('lb-video');
+
+  if (isVideo(item.src)) {
+    lbImg.style.display = 'none';
+    lbVid.style.display = 'block';
+    lbVid.src = item.src;
+    lbVid.load();
+  } else {
+    lbVid.pause(); lbVid.src = ''; lbVid.style.display = 'none';
+    lbImg.style.display = 'block';
+    lbImg.src = item.src;
+    lbImg.alt = item.caption || '';
+  }
+
+  el('lb-caption').textContent = [item.caption, item.date].filter(Boolean).join(' · ');
+  el('lb-prev').style.display = galleryIndex > 0 ? '' : 'none';
+  el('lb-next').style.display = galleryIndex < galleryItems.length - 1 ? '' : 'none';
+}
+
+el('lb-close').onclick = closeLightbox;
+el('lb-prev').onclick  = () => { if (galleryIndex > 0) { galleryIndex--; updateLightbox(); } };
+el('lb-next').onclick  = () => { if (galleryIndex < galleryItems.length - 1) { galleryIndex++; updateLightbox(); } };
+el('lightbox').onclick = (e) => { if (e.target === el('lightbox')) closeLightbox(); };
+document.addEventListener('keydown', (e) => {
+  if (!el('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft' && galleryIndex > 0) { galleryIndex--; updateLightbox(); }
+  if (e.key === 'ArrowRight' && galleryIndex < galleryItems.length - 1) { galleryIndex++; updateLightbox(); }
+});
+
+// ── CONTACT ───────────────────────────────────────────────────
+function renderContact() {
+  html('contact-intro', `I'm always open to academic collaborations, research discussions, and speaking opportunities. Don't hesitate to reach out!`);
+
+  let items = '';
+  if (PROFILE.email) {
+    items += `<div class="contact-item">
+      <div class="contact-item-icon">✉️</div>
+      <div><div class="contact-item-label">Email</div>
+           <div class="contact-item-value"><a href="mailto:${esc(PROFILE.email)}">${esc(PROFILE.email)}</a></div>
+      </div></div>`;
+  }
+  items += `<div class="contact-item">
+    <div class="contact-item-icon">🏛️</div>
+    <div><div class="contact-item-label">Affiliation</div>
+         <div class="contact-item-value">${esc(PROFILE.department)}<br><small style="color:var(--text-3)">${esc(PROFILE.affiliation)}</small></div>
+    </div></div>`;
+  if (PROFILE.lab) {
+    items += `<div class="contact-item">
+      <div class="contact-item-icon">⚛️</div>
+      <div><div class="contact-item-label">Lab</div>
+           <div class="contact-item-value">${esc(PROFILE.lab)}</div>
+      </div></div>`;
+  }
+  html('contact-items', items);
+
+  // Social grid
+  const socialDefs = {
+    github:        { label: 'GitHub',         sub: 'Code & repositories' },
+    linkedin:      { label: 'LinkedIn',        sub: 'Professional profile' },
+    googleScholar: { label: 'Google Scholar',  sub: 'Publications & citations' },
+    researchGate:  { label: 'ResearchGate',    sub: 'Research network' },
+    orcid:         { label: 'ORCID',           sub: 'Researcher ID' },
+  };
+  let socialHTML = '';
+  Object.entries(PROFILE.social || {}).forEach(([key, url]) => {
+    if (!url) return;
+    const def = socialDefs[key] || { label: key, sub: '' };
+    socialHTML += `<a href="${esc(url)}" class="social-card" target="_blank" rel="noopener">
+      <div class="social-card-icon">${socialIcon(key)}</div>
+      <div><div>${esc(def.label)}</div><div class="social-card-label">${esc(def.sub)}</div></div>
+    </a>`;
+  });
+  if (!socialHTML) {
+    socialHTML = `<p style="color:var(--text-3);font-size:0.85rem;grid-column:1/-1">Add social links to <code>PROFILE.social</code> in <code>data.js</code>.</p>`;
+  }
+  html('social-grid', socialHTML);
+
+  // Footer
+  html('footer-text', `© ${new Date().getFullYear()} <strong>${esc(PROFILE.name)}</strong> · ${esc(PROFILE.affiliation)} · Built with ♡`);
+}
+
+// ── NAVIGATION active state ───────────────────────────────────
+function updateActiveNav() {
+  const sections = ['home','about','research','project','gallery','contact'];
+  const scrollY = window.scrollY + 100;
+  let current = 'home';
+  sections.forEach(id => {
+    const s = document.getElementById(id);
+    if (s && s.offsetTop <= scrollY) current = id;
+  });
+  document.querySelectorAll('.nav-a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+
+// Mobile nav toggle
+el('nav-toggle').onclick = () => el('nav-mobile').classList.toggle('open');
+document.querySelectorAll('.nav-mobile .nav-a').forEach(a => {
+  a.addEventListener('click', () => el('nav-mobile').classList.remove('open'));
+});
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────
+function observeReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+
+// ── INIT ──────────────────────────────────────────────────────
+renderHero();
+renderAbout();
+renderResearch();
+renderProjects();
+renderGallery();
+renderContact();
+observeReveal();
+updateActiveNav();
+</script>
+</body>
+</html>
